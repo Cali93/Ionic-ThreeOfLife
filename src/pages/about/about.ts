@@ -8,7 +8,7 @@ import { SceneGraph } from '../../components/scenegraph/scenegraph';
 })
 export class AboutPage {
 
-  @ViewChild('scenegraph')
+ @ViewChild('scenegraph')
   sceneGraph: SceneGraph;
 
   constructor(public navCtrl: NavController) { }

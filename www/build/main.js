@@ -63,7 +63,7 @@ var TabsPage = (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -110,7 +110,7 @@ var AboutPage = (function () {
     ], AboutPage.prototype, "sceneGraph", void 0);
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <scenegraph></scenegraph>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\pages\about\about.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <scenegraph #scenegraph></scenegraph>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\pages\about\about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], AboutPage);
@@ -127,27 +127,568 @@ var AboutPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SceneGraph; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three_of_life__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three_of_life___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_three_of_life__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
 };
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
 
 var SceneGraph = (function () {
     function SceneGraph() {
     }
     SceneGraph.prototype.ngAfterViewInit = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            function onWindowResize(event) {
+                editor.signals.windowResize.dispatch();
+            }
+            var editor, viewport, script, player, toolbar, menubar, sidebar, modal, isLoadingFromHash, hash, file, loader;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loadScript('../build/three.js')];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/libs/system.min.js')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/controls/EditorControls.js')];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/controls/TransformControls.js')];
+                    case 4:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/libs/jszip.min.js')];
+                    case 5:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/libs/inflate.min.js"></script> <')];
+                    case 6:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/AMFLoader.js')];
+                    case 7:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/AWDLoader.js')];
+                    case 8:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/BabylonLoader.js')];
+                    case 9:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/ColladaLoader.js')];
+                    case 10:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/FBXLoader.js')];
+                    case 11:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/GLTFLoader.js')];
+                    case 12:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/KMZLoader.js')];
+                    case 13:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/MD2Loader.js')];
+                    case 14:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/OBJLoader.js')];
+                    case 15:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/MTLLoader.js')];
+                    case 16:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/PlayCanvasLoader.js')];
+                    case 17:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/PLYLoader.js')];
+                    case 18:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/STLLoader.js')];
+                    case 19:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/TGALoader.js')];
+                    case 20:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/TDSLoader.js')];
+                    case 21:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/UTF8Loader.js')];
+                    case 22:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/VRMLLoader.js')];
+                    case 23:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/VTKLoader.js')];
+                    case 24:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/ctm/lzma.js')];
+                    case 25:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/ctm/ctm.js')];
+                    case 26:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/loaders/ctm/CTMLoader.js')];
+                    case 27:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/exporters/OBJExporter.js')];
+                    case 28:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/exporters/GLTFExporter.js')];
+                    case 29:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/exporters/STLExporter.js')];
+                    case 30:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/renderers/Projector.js')];
+                    case 31:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/renderers/CanvasRenderer.js')];
+                    case 32:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/renderers/RaytracingRenderer.js')];
+                    case 33:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/renderers/SoftwareRenderer.js')];
+                    case 34:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/renderers/SVGRenderer.js')];
+                    case 35:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/codemirror/codemirror.js')];
+                    case 36:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/codemirror/mode/javascript.js')];
+                    case 37:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/codemirror/mode/glsl.js')];
+                    case 38:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/esprima.js')];
+                    case 39:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/jsonlint.js')];
+                    case 40:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/glslprep.min.js')];
+                    case 41:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/codemirror/addon/dialog.js')];
+                    case 42:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/codemirror/addon/show-hint.js')];
+                    case 43:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/codemirror/addon/tern.js')];
+                    case 44:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/acorn/acorn.js')];
+                    case 45:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/acorn/acorn_loose.js')];
+                    case 46:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/acorn/walk.js')];
+                    case 47:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ternjs/polyfill.js')];
+                    case 48:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ternjs/signal.js')];
+                    case 49:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ternjs/tern.js')];
+                    case 50:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ternjs/def.js')];
+                    case 51:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ternjs/comment.js')];
+                    case 52:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ternjs/infer.js')];
+                    case 53:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ternjs/doc_comment.js')];
+                    case 54:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/tern-threejs/threejs.js')];
+                    case 55:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/signals.min.js')];
+                    case 56:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ui.js')];
+                    case 57:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/ui.three.js')];
+                    case 58:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/app.js')];
+                    case 59:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Player.js')];
+                    case 60:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Script.js')];
+                    case 61:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/vr/WebVR.js')];
+                    case 62:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Storage.js')];
+                    case 63:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Editor.js')];
+                    case 64:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Config.js')];
+                    case 65:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/History.js')];
+                    case 66:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Loader.js')];
+                    case 67:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.js')];
+                    case 68:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.File.js')];
+                    case 69:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.Edit.js')];
+                    case 70:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.Add.js')];
+                    case 71:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.Play.js')];
+                    case 72:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.View.js"></')];
+                    case 73:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.Examples.js')];
+                    case 74:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.Help.js')];
+                    case 75:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Menubar.Status.js')];
+                    case 76:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.js')];
+                    case 77:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Scene.js')];
+                    case 78:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Project.js')];
+                    case 79:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Settings.js')];
+                    case 80:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Settings.Shortcuts.js')];
+                    case 81:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Properties.js')];
+                    case 82:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Object.js')];
+                    case 83:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.js')];
+                    case 84:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.Geometry.js')];
+                    case 85:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.BufferGeometry.js')];
+                    case 86:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.Modifiers.js')];
+                    case 87:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.BoxGeometry.js')];
+                    case 88:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.CircleGeometry.js')];
+                    case 89:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.CylinderGeometry.js')];
+                    case 90:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.IcosahedronGeometry.js')];
+                    case 91:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.PlaneGeometry.js')];
+                    case 92:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.SphereGeometry.js')];
+                    case 93:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.TorusGeometry.js')];
+                    case 94:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.TorusKnotGeometry.js')];
+                    case 95:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('../examples/js/geometries/TeapotBufferGeometry.js')];
+                    case 96:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.TeapotBufferGeometry.js')];
+                    case 97:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Geometry.LatheGeometry.js')];
+                    case 98:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Material.js')];
+                    case 99:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Animation.js')];
+                    case 100:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.Script.js')];
+                    case 101:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Sidebar.History.js')];
+                    case 102:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Toolbar.js')];
+                    case 103:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Viewport.js')];
+                    case 104:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Viewport.Info.js')];
+                    case 105:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/Command.js')];
+                    case 106:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/AddObjectCommand.js')];
+                    case 107:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/RemoveObjectCommand.js')];
+                    case 108:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/MoveObjectCommand.js')];
+                    case 109:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetPositionCommand.js')];
+                    case 110:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetRotationCommand.js')];
+                    case 111:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetScaleCommand.js')];
+                    case 112:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetValueCommand.js')];
+                    case 113:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetUuidCommand.js')];
+                    case 114:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetColorCommand.js')];
+                    case 115:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetGeometryCommand.js')];
+                    case 116:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetGeometryValueCommand.js')];
+                    case 117:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/MultiCmdsCommand.js')];
+                    case 118:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/AddScriptCommand.js')];
+                    case 119:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/RemoveScriptCommand.js')];
+                    case 120:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetScriptValueCommand.js')];
+                    case 121:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetMaterialCommand.js')];
+                    case 122:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetMaterialValueCommand.js')];
+                    case 123:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetMaterialColorCommand.js')];
+                    case 124:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetMaterialMapCommand.js')];
+                    case 125:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/commands/SetSceneCommand.js')];
+                    case 126:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/html2canvas.js')];
+                    case 127:
+                        _a.sent();
+                        return [4 /*yield*/, this.loadScript('js/libs/three.html.js')];
+                    case 128:
+                        _a.sent();
+                        window.URL = window.URL || window.webkitURL;
+                        window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
+                        Number.prototype.format = function () {
+                            return this.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+                        };
+                        editor = new Editor();
+                        viewport = new Viewport(editor);
+                        document.body.appendChild(viewport.dom);
+                        script = new Script(editor);
+                        document.body.appendChild(script.dom);
+                        player = new Player(editor);
+                        document.body.appendChild(player.dom);
+                        toolbar = new Toolbar(editor);
+                        document.body.appendChild(toolbar.dom);
+                        menubar = new Menubar(editor);
+                        document.body.appendChild(menubar.dom);
+                        sidebar = new Sidebar(editor);
+                        document.body.appendChild(sidebar.dom);
+                        modal = new UI.Modal();
+                        document.body.appendChild(modal.dom);
+                        //
+                        editor.setTheme(editor.config.getKey('theme'));
+                        editor.storage.init(function () {
+                            editor.storage.get(function (state) {
+                                if (isLoadingFromHash)
+                                    return;
+                                if (state !== undefined) {
+                                    editor.fromJSON(state);
+                                }
+                                var selected = editor.config.getKey('selected');
+                                if (selected !== undefined) {
+                                    editor.selectByUuid(selected);
+                                }
+                            });
+                            //
+                            var timeout;
+                            function saveState(scene) {
+                                if (editor.config.getKey('autosave') === false) {
+                                    return;
+                                }
+                                clearTimeout(timeout);
+                                timeout = setTimeout(function () {
+                                    editor.signals.savingStarted.dispatch();
+                                    timeout = setTimeout(function () {
+                                        editor.storage.set(editor.toJSON());
+                                        editor.signals.savingFinished.dispatch();
+                                    }, 100);
+                                }, 1000);
+                            }
+                            ;
+                            var signals = editor.signals;
+                            signals.geometryChanged.add(saveState);
+                            signals.objectAdded.add(saveState);
+                            signals.objectChanged.add(saveState);
+                            signals.objectRemoved.add(saveState);
+                            signals.materialChanged.add(saveState);
+                            signals.sceneBackgroundChanged.add(saveState);
+                            signals.sceneFogChanged.add(saveState);
+                            signals.sceneGraphChanged.add(saveState);
+                            signals.scriptChanged.add(saveState);
+                            signals.historyChanged.add(saveState);
+                            signals.showModal.add(function (content) {
+                                modal.show(content);
+                            });
+                        });
+                        //
+                        document.addEventListener('dragover', function (event) {
+                            event.preventDefault();
+                            event.dataTransfer.dropEffect = 'copy';
+                        }, false);
+                        document.addEventListener('drop', function (event) {
+                            event.preventDefault();
+                            if (event.dataTransfer.files.length > 0) {
+                                editor.loader.loadFile(event.dataTransfer.files[0]);
+                            }
+                        }, false);
+                        window.addEventListener('resize', onWindowResize, false);
+                        onWindowResize();
+                        isLoadingFromHash = false;
+                        hash = window.location.hash;
+                        if (hash.substr(1, 5) === 'file=') {
+                            file = hash.substr(6);
+                            if (confirm('Any unsaved data will be lost. Are you sure?')) {
+                                loader = new __WEBPACK_IMPORTED_MODULE_1_three_of_life__["FileLoader"]();
+                                loader.crossOrigin = '';
+                                loader.load(file, function (text) {
+                                    editor.clear();
+                                    editor.fromJSON(JSON.parse(text));
+                                });
+                                isLoadingFromHash = true;
+                            }
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    SceneGraph.prototype.loadScript = function (scriptUrl) {
+        return new Promise(function (resolve, reject) {
+            var scriptElement = document.createElement('script');
+            scriptElement.src = scriptUrl;
+            scriptElement.onload = resolve;
+            document.body.appendChild(scriptElement);
+        });
+    };
+    SceneGraph.prototype.startAnimation = function () {
+    };
+    SceneGraph.prototype.stopAnimation = function () {
     };
     SceneGraph = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'scenegraph',
-            template: '<div style="width:100%; height:100%"></div>'
-        }),
-        __metadata("design:paramtypes", [])
+            selector: 'scenegraph',template:/*ion-inline-start:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\node_modules\three-of-life\editor\index.html"*/'<!DOCTYPE html>\n\n<html lang="en">\n\n	<head>\n\n		<title>three.js / editor</title>\n\n		<meta charset="utf-8">\n\n		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">\n\n	</head>\n\n	<body ontouchstart="">\n\n		<!-- <link href="css/main.css" rel="stylesheet" />\n\n		<link id="theme" href="css/light.css" rel="stylesheet" /> -->\n\n\n\n		<!-- <script src="../build/three.js"></script>\n\n		<script src="../examples/js/libs/system.min.js"></script>\n\n		\n\n		<script src="../examples/js/controls/EditorControls.js"></script>\n\n		<script src="../examples/js/controls/TransformControls.js"></script>\n\n		\n\n		<script src="../examples/js/libs/jszip.min.js"></script>\n\n		<script src="../examples/js/libs/inflate.min.js"></script> FBX\n\n		\n\n		<script src="../examples/js/loaders/AMFLoader.js"></script>\n\n		<script src="../examples/js/loaders/AWDLoader.js"></script>\n\n		<script src="../examples/js/loaders/BabylonLoader.js"></script>\n\n		<script src="../examples/js/loaders/ColladaLoader.js"></script>\n\n		<script src="../examples/js/loaders/FBXLoader.js"></script>\n\n		<script src="../examples/js/loaders/GLTFLoader.js"></script>\n\n		<script src="../examples/js/loaders/KMZLoader.js"></script>\n\n		<script src="../examples/js/loaders/MD2Loader.js"></script>\n\n		<script src="../examples/js/loaders/OBJLoader.js"></script>\n\n		<script src="../examples/js/loaders/MTLLoader.js"></script>\n\n		<script src="../examples/js/loaders/PlayCanvasLoader.js"></script>\n\n		<script src="../examples/js/loaders/PLYLoader.js"></script>\n\n		<script src="../examples/js/loaders/STLLoader.js"></script>\n\n		<script src="../examples/js/loaders/TGALoader.js"></script>\n\n		<script src="../examples/js/loaders/TDSLoader.js"></script>\n\n		<script src="../examples/js/loaders/UTF8Loader.js"></script>\n\n		<script src="../examples/js/loaders/VRMLLoader.js"></script>\n\n		<script src="../examples/js/loaders/VTKLoader.js"></script>\n\n		<script src="../examples/js/loaders/ctm/lzma.js"></script>\n\n		<script src="../examples/js/loaders/ctm/ctm.js"></script>\n\n		<script src="../examples/js/loaders/ctm/CTMLoader.js"></script>\n\n		<script src="../examples/js/exporters/OBJExporter.js"></script>\n\n		<script src="../examples/js/exporters/GLTFExporter.js"></script>\n\n		<script src="../examples/js/exporters/STLExporter.js"></script>\n\n		\n\n		<script src="../examples/js/renderers/Projector.js"></script>\n\n		<script src="../examples/js/renderers/CanvasRenderer.js"></script>\n\n		<script src="../examples/js/renderers/RaytracingRenderer.js"></script>\n\n		<script src="../examples/js/renderers/SoftwareRenderer.js"></script>\n\n		<script src="../examples/js/renderers/SVGRenderer.js"></script>\n\n		\n\n		<link rel="stylesheet" href="js/libs/codemirror/codemirror.css">\n\n		<link rel="stylesheet" href="js/libs/codemirror/theme/monokai.css">\n\n		<script src="js/libs/codemirror/codemirror.js"></script>\n\n		<script src="js/libs/codemirror/mode/javascript.js"></script>\n\n		<script src="js/libs/codemirror/mode/glsl.js"></script>\n\n		\n\n		<script src="js/libs/esprima.js"></script>\n\n		<script src="js/libs/jsonlint.js"></script>\n\n		<script src="js/libs/glslprep.min.js"></script>\n\n		\n\n		<link rel="stylesheet" href="js/libs/codemirror/addon/dialog.css">\n\n		<link rel="stylesheet" href="js/libs/codemirror/addon/show-hint.css">\n\n		<link rel="stylesheet" href="js/libs/codemirror/addon/tern.css">\n\n		<script src="js/libs/codemirror/addon/dialog.js"></script>\n\n		<script src="js/libs/codemirror/addon/show-hint.js"></script>\n\n		<script src="js/libs/codemirror/addon/tern.js"></script>\n\n		<script src="js/libs/acorn/acorn.js"></script>\n\n		<script src="js/libs/acorn/acorn_loose.js"></script>\n\n		<script src="js/libs/acorn/walk.js"></script>\n\n		<script src="js/libs/ternjs/polyfill.js"></script>\n\n		<script src="js/libs/ternjs/signal.js"></script>\n\n		<script src="js/libs/ternjs/tern.js"></script>\n\n		<script src="js/libs/ternjs/def.js"></script>\n\n		<script src="js/libs/ternjs/comment.js"></script>\n\n		<script src="js/libs/ternjs/infer.js"></script>\n\n		<script src="js/libs/ternjs/doc_comment.js"></script>\n\n		<script src="js/libs/tern-threejs/threejs.js"></script>\n\n		\n\n		<script src="js/libs/signals.min.js"></script>\n\n		<script src="js/libs/ui.js"></script>\n\n		<script src="js/libs/ui.three.js"></script>\n\n		\n\n		<script src="js/libs/app.js"></script>\n\n		<script src="js/Player.js"></script>\n\n		<script src="js/Script.js"></script>\n\n		\n\n		<script src="../examples/js/vr/WebVR.js"></script>\n\n		\n\n		<script src="js/Storage.js"></script>\n\n		\n\n		<script src="js/Editor.js"></script>\n\n		<script src="js/Config.js"></script>\n\n		<script src="js/History.js"></script>\n\n		<script src="js/Loader.js"></script>\n\n		<script src="js/Menubar.js"></script>\n\n		<script src="js/Menubar.File.js"></script>\n\n		<script src="js/Menubar.Edit.js"></script>\n\n		<script src="js/Menubar.Add.js"></script>\n\n		<script src="js/Menubar.Play.js"></script>\n\n		<script src="js/Menubar.View.js"></script>\n\n		<script src="js/Menubar.Examples.js"></script>\n\n		<script src="js/Menubar.Help.js"></script>\n\n		<script src="js/Menubar.Status.js"></script>\n\n		<script src="js/Sidebar.js"></script>\n\n		<script src="js/Sidebar.Scene.js"></script>\n\n		<script src="js/Sidebar.Project.js"></script>\n\n		<script src="js/Sidebar.Settings.js"></script>\n\n		<script src="js/Sidebar.Settings.Shortcuts.js"></script>\n\n		<script src="js/Sidebar.Properties.js"></script>\n\n		<script src="js/Sidebar.Object.js"></script>\n\n		<script src="js/Sidebar.Geometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.Geometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.BufferGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.Modifiers.js"></script>\n\n		<script src="js/Sidebar.Geometry.BoxGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.CircleGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.CylinderGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.IcosahedronGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.PlaneGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.SphereGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.TorusGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.TorusKnotGeometry.js"></script>\n\n		<script src="../examples/js/geometries/TeapotBufferGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.TeapotBufferGeometry.js"></script>\n\n		<script src="js/Sidebar.Geometry.LatheGeometry.js"></script>\n\n		<script src="js/Sidebar.Material.js"></script>\n\n		<script src="js/Sidebar.Animation.js"></script>\n\n		<script src="js/Sidebar.Script.js"></script>\n\n		<script src="js/Sidebar.History.js"></script>\n\n		<script src="js/Toolbar.js"></script>\n\n		<script src="js/Viewport.js"></script>\n\n		<script src="js/Viewport.Info.js"></script>\n\n		\n\n		<script src="js/Command.js"></script>\n\n		<script src="js/commands/AddObjectCommand.js"></script>\n\n		<script src="js/commands/RemoveObjectCommand.js"></script>\n\n		<script src="js/commands/MoveObjectCommand.js"></script>\n\n		<script src="js/commands/SetPositionCommand.js"></script>\n\n		<script src="js/commands/SetRotationCommand.js"></script>\n\n		<script src="js/commands/SetScaleCommand.js"></script>\n\n		<script src="js/commands/SetValueCommand.js"></script>\n\n		<script src="js/commands/SetUuidCommand.js"></script>\n\n		<script src="js/commands/SetColorCommand.js"></script>\n\n		<script src="js/commands/SetGeometryCommand.js"></script>\n\n		<script src="js/commands/SetGeometryValueCommand.js"></script>\n\n		<script src="js/commands/MultiCmdsCommand.js"></script>\n\n		<script src="js/commands/AddScriptCommand.js"></script>\n\n		<script src="js/commands/RemoveScriptCommand.js"></script>\n\n		<script src="js/commands/SetScriptValueCommand.js"></script>\n\n		<script src="js/commands/SetMaterialCommand.js"></script>\n\n		<script src="js/commands/SetMaterialValueCommand.js"></script>\n\n		<script src="js/commands/SetMaterialColorCommand.js"></script>\n\n		<script src="js/commands/SetMaterialMapCommand.js"></script>\n\n		<script src="js/commands/SetSceneCommand.js"></script>\n\n		\n\n		<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="qyqgfqd9j8z890t"></script>\n\n		\n\n		<script src="js/libs/html2canvas.js"></script>\n\n		<script src="js/libs/three.html.js"></script> -->\n\n\n\n		<!-- <script>\n\n		\n\n			window.URL = window.URL || window.webkitURL;\n\n			window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;\n\n		\n\n			Number.prototype.format = function (){\n\n				return this.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");\n\n			};\n\n		\n\n			//\n\n		\n\n			var editor = new Editor();\n\n		\n\n			var viewport = new Viewport( editor );\n\n			document.body.appendChild( viewport.dom );\n\n		\n\n			var script = new Script( editor );\n\n			document.body.appendChild( script.dom );\n\n		\n\n			var player = new Player( editor );\n\n			document.body.appendChild( player.dom );\n\n		\n\n			var toolbar = new Toolbar( editor );\n\n			document.body.appendChild( toolbar.dom );\n\n		\n\n			var menubar = new Menubar( editor );\n\n			document.body.appendChild( menubar.dom );\n\n		\n\n			var sidebar = new Sidebar( editor );\n\n			document.body.appendChild( sidebar.dom );\n\n		\n\n			var modal = new UI.Modal();\n\n			document.body.appendChild( modal.dom );\n\n		\n\n			//\n\n		\n\n			editor.setTheme( editor.config.getKey( \'theme\' ) );\n\n		\n\n			editor.storage.init( function () {\n\n		\n\n				editor.storage.get( function ( state ) {\n\n		\n\n					if ( isLoadingFromHash ) return;\n\n		\n\n					if ( state !== undefined ) {\n\n		\n\n						editor.fromJSON( state );\n\n		\n\n					}\n\n		\n\n					var selected = editor.config.getKey( \'selected\' );\n\n		\n\n					if ( selected !== undefined ) {\n\n		\n\n						editor.selectByUuid( selected );\n\n		\n\n					}\n\n		\n\n				} );\n\n		\n\n				//\n\n		\n\n				var timeout;\n\n		\n\n				function saveState( scene ) {\n\n		\n\n					if ( editor.config.getKey( \'autosave\' ) === false ) {\n\n		\n\n						return;\n\n		\n\n					}\n\n		\n\n					clearTimeout( timeout );\n\n		\n\n					timeout = setTimeout( function () {\n\n		\n\n						editor.signals.savingStarted.dispatch();\n\n		\n\n						timeout = setTimeout( function () {\n\n		\n\n							editor.storage.set( editor.toJSON() );\n\n		\n\n							editor.signals.savingFinished.dispatch();\n\n		\n\n						}, 100 );\n\n		\n\n					}, 1000 );\n\n		\n\n				};\n\n		\n\n				var signals = editor.signals;\n\n		\n\n				signals.geometryChanged.add( saveState );\n\n				signals.objectAdded.add( saveState );\n\n				signals.objectChanged.add( saveState );\n\n				signals.objectRemoved.add( saveState );\n\n				signals.materialChanged.add( saveState );\n\n				signals.sceneBackgroundChanged.add( saveState );\n\n				signals.sceneFogChanged.add( saveState );\n\n				signals.sceneGraphChanged.add( saveState );\n\n				signals.scriptChanged.add( saveState );\n\n				signals.historyChanged.add( saveState );\n\n		\n\n				signals.showModal.add( function ( content ) {\n\n		\n\n					modal.show( content );\n\n		\n\n				} );\n\n		\n\n			} );\n\n		\n\n			//\n\n		\n\n			document.addEventListener( \'dragover\', function ( event ) {\n\n		\n\n				event.preventDefault();\n\n				event.dataTransfer.dropEffect = \'copy\';\n\n		\n\n			}, false );\n\n		\n\n			document.addEventListener( \'drop\', function ( event ) {\n\n		\n\n				event.preventDefault();\n\n		\n\n				if ( event.dataTransfer.files.length > 0 ) {\n\n		\n\n					editor.loader.loadFile( event.dataTransfer.files[ 0 ] );\n\n		\n\n				}\n\n		\n\n			}, false );\n\n		\n\n			function onWindowResize( event ) {\n\n		\n\n				editor.signals.windowResize.dispatch();\n\n		\n\n			}\n\n		\n\n			window.addEventListener( \'resize\', onWindowResize, false );\n\n		\n\n			onWindowResize();\n\n		\n\n			//\n\n		\n\n			var isLoadingFromHash = false;\n\n			var hash = window.location.hash;\n\n		\n\n			if ( hash.substr( 1, 5 ) === \'file=\' ) {\n\n		\n\n				var file = hash.substr( 6 );\n\n		\n\n				if ( confirm( \'Any unsaved data will be lost. Are you sure?\' ) ) {\n\n		\n\n					var loader = new THREE.FileLoader();\n\n					loader.crossOrigin = \'\';\n\n					loader.load( file, function ( text ) {\n\n		\n\n						editor.clear();\n\n						editor.fromJSON( JSON.parse( text ) );\n\n		\n\n					} );\n\n		\n\n					isLoadingFromHash = true;\n\n		\n\n				}\n\n		\n\n			}\n\n		\n\n			/*\n\n			window.addEventListener( \'message\', function ( event ) {\n\n		\n\n				editor.clear();\n\n				editor.fromJSON( event.data );\n\n		\n\n			}, false );\n\n			*/\n\n		\n\n		</script> -->\n\n	</body>\n\n</html>\n\n'/*ion-inline-end:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\node_modules\three-of-life\editor\index.html"*/,
+            styleUrls: [
+                '/node_modules/three-of-life/editor/js/libs/codemirror/codemirror.css',
+                '/node_modules/three-of-life/editor/js/libs/codemirror/addon/dialog.css',
+                '/node_modules/three-of-life/editor/js/libs/codemirror/show-hint.css',
+                '/node_modules/three-of-life/editor/js/libs/codemirror/tern.css',
+                '/node_modules/three-of-life/editor/js/libs/codemirror/theme/monokai.css',
+                '/node_modules/three-of-life/editor/css/main.css',
+                '/node_modules/three-of-life/editor/css/light.css'
+            ]
+        })
     ], SceneGraph);
     return SceneGraph;
 }());
@@ -180,7 +721,7 @@ var ContactPage = (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Contact\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n\n    <ion-item>\n\n      <ion-icon name="ionic" item-start></ion-icon>\n\n      @ionicframework\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\pages\contact\contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], ContactPage);
@@ -215,7 +756,7 @@ var HomePage = (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>MODs 3D furnitures</h3>\n  <img src="https://cdnb.artstation.com/p/assets/images/images/004/305/847/large/dane-vranes-firstin-0000-layer-8.jpg?1482246585" alt="">\n  <p>\n    Welcome to our 3D product configurator. Here you will be able to design your own furnitures with our help.\n    <!-- If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way. -->\n  </p>\n\n  <img class="modswall" src="https://sc02.alicdn.com/kf/HTB1Z8RgLpXXXXcAXVXXq6xXFXXXU/Building-material-natural-plant-fiber-3d-wall.jpg_350x350.jpg" alt="">\n  The mods can be recovered by almost any surfaces. You can make the structure you want thanks to vertical and perpendicular alignements.\n\n  <button ion-button secondary menuToggle>GO TO PRODUCT CONFIGURATOR</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <h3>MODs 3D furnitures</h3>\n\n  <img src="https://cdnb.artstation.com/p/assets/images/images/004/305/847/large/dane-vranes-firstin-0000-layer-8.jpg?1482246585" alt="">\n\n  <p>\n\n    Welcome to our 3D product configurator. Here you will be able to design your own furnitures with our help.\n\n    <!-- If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way. -->\n\n  </p>\n\n\n\n  <img class="modswall" src="https://sc02.alicdn.com/kf/HTB1Z8RgLpXXXXcAXVXXq6xXFXXXU/Building-material-natural-plant-fiber-3d-wall.jpg_350x350.jpg" alt="">\n\n  The mods can be recovered by almost any surfaces. You can make the structure you want thanks to vertical and perpendicular alignements.\n\n\n\n  <button ion-button secondary menuToggle>GO TO PRODUCT CONFIGURATOR</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], HomePage);
@@ -349,7 +890,7 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\Ali\Documents\Ionic Projects\Ionic-ThreeJS-boilerplate-master\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\wamp64\www\ModsCraft\Ionic-ThreeOfLife\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
