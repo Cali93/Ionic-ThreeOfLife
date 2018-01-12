@@ -13,12 +13,12 @@ export class AboutPage {
 
   constructor(public navCtrl: NavController) { }
 
-  ionViewDidEnter() {
+  /*ionViewDidEnter() {
     this.sceneGraph.startAnimation();
   }
 
   ionViewDidLeave() {
     this.sceneGraph.stopAnimation();
-  }
+  }*/
 
 }
